@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Places to visit in Kerala</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .images {
+      text-align: center;
+    }
+
+    .image-button {
+      display: inline-block;
+      margin: 10px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .image-button:hover {
+      transform: scale(1.1);
+    }
+
+    .image {
+      width: 200px;
+      height: 150px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
+      max-width: 1000px; /* Increase the max-width */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);}
+  </style>
+</head>
+<body>
+  <h1>Places to visit in Kerala</h1>
+
+  <div class="images">
+    <a href="thiruvananthapuram.html">
+    <button class="image-button" onclick="showImage(0)">
+      <img class="image" src="images/trivandrum illustr.jpg" alt="Image 1">
+      <h3>Thiruvananthapuram</h3>
+    </button>
+    </a>
+    <a href="kollam.html">
+    <button class="image-button" onclick="showImage(1)">
+      <img class="image" src="images/kollam illustration.png" alt="Image 2">
+      <h3>Kollam</h3>
+    </button>
+</a>
+<a href="alappuzha.html">
+    <button class="image-button" onclick="showImage(2)">
+      <img class="image" src="images/alappuzha illustrations.png" alt="Image 3">
+      <h3>Allapuzha</h3>
+    </button>
+    </a>
+    <a href="kottayam.html">
+    <button class="image-button" onclick="showImage(3)">
+      <img class="image" src="images/kottayam illustrions.png" alt="Image 4">
+      <h3>Kottayam</h3>
+    </button>
+    </a>
+    <a href="ernakulam.html">
+    <button class="image-button" onclick="showImage(4)">
+      <img class="image" src="images/ernakulam 2 illustrtins.png" alt="Image 5">
+      <h3>Ernakulam</h3>
+    </button>
+    </a>
+    <a href="kannur.html">
+    <button class="image-button" onclick="showImage(5)">
+      <img class="image" src="images/kannur.png" alt="Image 6">
+      <h3>Kannur</h3>
+    </button>
+    </a>
+  </div>
+
+  <div class="image-container">
+    <img class="image" src="" alt="">
+  </div>
+
+  <script>
+    function showImage(index) {
+      var images = document.getElementsByClassName("image");
+      var selectedImage = images[index].src;
+
+      var imageContainer = document.querySelector(".image-container");
+      var displayedImage = imageContainer.querySelector(".image");
+
+      displayedImage.src = selectedImage;
+    }
+  </script>
+</body>
+</html>
+
+

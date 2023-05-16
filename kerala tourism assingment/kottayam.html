@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slideshow Webpage</title>
+    <style>
+        /* CSS for header and paragraph */
+        header {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* CSS for slideshow */
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .slideshow-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* CSS for slideshow navigation dots */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kottayam</h1>
+    </header>
+
+    <p>ottayam is blessed with nature’s bounty in abundance. It is the pride of God’s own country with its beautiful churches, charming nearby hill stations, significant temples, and refreshing waterfalls. The Western Ghats and the backwaters add to the beauty to this undisturbed, rustic town of Kerala. The numerous plantations – rubber, coconut, palm, spices and the flora make for lush green landscapes that are totally stunning. All these factors, aside from it being strikingly beautiful, make it as one of the must visit destinations in Kerala..</p>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img class="slideshow-image" src="Vaikom-Beer-House-in-Kottayam.webp" alt="Image 1">
+        </div>
+
+        <div class="mySlides">
+            <img class="slideshow-image" src="Elaveezha-Poonchira-in-Kottayam.webp" alt="Image 2">
+        </div>
+
+        <div class="mySlides">
+            <img class="slideshow-image" src="paalaruvi waterfall.jpg" alt="Image 3">
+        </div>
+
+        <!-- Add more slides as needed -->
+
+        <!-- Slideshow navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for slideshow functionality
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
+</body>
+</html>

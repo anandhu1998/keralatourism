@@ -1,0 +1,74 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  header ul {
+    list-style: none;
+  }
+  
+  header ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  header ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Style the hero section */
+  .hero {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Style the cover image */
+  .cover-image {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .cover-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Style the content section */
+  .content {
+    padding: 20px;
+    text-align: justify;
+  }
+  
+  /* Style the "View More" button */
+  .view-more {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .view-more .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+
+
+  

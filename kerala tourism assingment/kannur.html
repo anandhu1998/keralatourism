@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slideshow Webpage</title>
+    <style>
+        /* CSS for header and paragraph */
+        header {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* CSS for slideshow */
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .slideshow-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* CSS for slideshow navigation dots */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kannur</h1>
+    </header>
+
+    <p>The city Kannur is considered as the crown of the paradise called Kerala. As soon as you enter the city on the Malabar coast, you are greeted with the refreshing and breathtaking scent and sight of nature, historic forts, ageless folk arts, and more. This is the place where you can enjoy a quiet time amidst nature and get a chance to learn the rich history at forts, old shrines, and museums. You can also get a taste of its world-famous spices and lots more. While there’s so much to explore, naturally there’ll be numerous places to visit in Kannur.</p>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img class="slideshow-image" src="Payyambalam-Beach_10th-jan kannur.webp" alt="Image 1">
+        </div>
+
+        <div class="mySlides">
+            <img class="slideshow-image" src="kannur.png" alt="Image 2">
+        </div>
+
+        <div class="mySlides">
+            <img class="slideshow-image" src="kannur.png" alt="Image 3">
+        </div>
+
+        <!-- Add more slides as needed -->
+
+        <!-- Slideshow navigation dots -->
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for slideshow functionality
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
+</body>
+</html>
